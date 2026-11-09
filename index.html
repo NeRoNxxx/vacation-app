@@ -11,16 +11,14 @@
       height: 100%;
       overflow: hidden;
       background: #080b14;
-      -webkit-text-size-adjust: 100%;
     }
     iframe {
-      width: 100%;
-      height: 100%;
+      width: 125%;
+      height: 125%;
       border: none;
       display: block;
-    }
-    @supports (height: 100dvh) {
-      iframe { height: 100dvh; }
+      transform: scale(0.8);
+      transform-origin: top left;
     }
   </style>
 </head>
