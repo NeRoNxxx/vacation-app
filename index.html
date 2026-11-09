@@ -11,14 +11,29 @@
       height: 100%;
       overflow: hidden;
       background: #080b14;
+      -webkit-text-size-adjust: 100%;
     }
     iframe {
-      width: 125%;
-      height: 125%;
+      width: 100%;
+      height: 100%;
       border: none;
       display: block;
-      transform: scale(0.8);
-      transform-origin: top left;
+    }
+    @supports (height: 100dvh) {
+      iframe { height: 100dvh; }
+    }
+
+    /* ===== Масштабирование ТОЛЬКО для мобильных/планшетов ===== */
+    @media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+      iframe {
+        width: 125%;
+        height: 125%;
+        transform: scale(0.8);
+        transform-origin: top left;
+      }
+      @supports (height: 100dvh) {
+        iframe { height: 125dvh; }
+      }
     }
   </style>
 </head>
