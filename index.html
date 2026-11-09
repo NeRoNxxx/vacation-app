@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>График отпусков</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -11,6 +11,7 @@
       height: 100%;
       overflow: hidden;
       background: #080b14;
+      -webkit-text-size-adjust: 100%;
     }
     iframe {
       width: 100%;
@@ -18,7 +19,6 @@
       border: none;
       display: block;
     }
-    /* На мобильных — на весь экран, включая безопасные зоны (iPhone) */
     @supports (height: 100dvh) {
       iframe { height: 100dvh; }
     }
